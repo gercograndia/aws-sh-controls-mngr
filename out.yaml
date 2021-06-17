@@ -1,0 +1,1267 @@
+arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0:
+  subscription_arn: arn:aws:securityhub:{region}:{account}:subscription/cis-aws-foundations-benchmark/v/1.2.0
+  status: READY
+  controls:
+    CIS.1.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.1
+      title: Avoid the use of the "root" account
+      description: The "root" account has unrestricted access to all resources in
+        the AWS account. It is highly recommended that the use of this account be
+        avoided.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.10:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.10
+      title: Ensure IAM password policy prevents password reuse
+      description: IAM password policies can prevent the reuse of a given password
+        by the same user. It is recommended that the password policy prevent the reuse
+        of passwords.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.11:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.11
+      title: Ensure IAM password policy expires passwords within 90 days or less
+      description: IAM password policies can require passwords to be rotated or expired
+        after a given number of days. It is recommended that the password policy expire
+        passwords after 90 days or less.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.12:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.12
+      title: Ensure no root account access key exists
+      description: The root account is the most privileged user in an AWS account.
+        AWS Access Keys provide programmatic access to a given AWS account. It is
+        recommended that all access keys associated with the root account be removed.
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.13:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.13
+      title: Ensure MFA is enabled for the "root" account
+      description: The root account is the most privileged user in an AWS account.
+        MFA adds an extra layer of protection on top of a user name and password.
+        With MFA enabled, when a user signs in to an AWS website, they will be prompted
+        for their user name and password as well as for an authentication code from
+        their AWS MFA device.
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.14:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.14
+      title: Ensure hardware MFA is enabled for the "root" account
+      description: The root account is the most privileged user in an AWS account.
+        MFA adds an extra layer of protection on top of a user name and password.
+        With MFA enabled, when a user signs in to an AWS website, they will be prompted
+        for their user name and password as well as for an authentication code from
+        their AWS MFA device. For Level 2, it is recommended that the root account
+        be protected with a hardware MFA.
+      severity: CRITICAL
+      status: DISABLED
+      disabled_reason: As we're already limiting the use of the root account by means
+        of service control policies, a virtual MFA for the root account is considered
+        sufficient.
+    CIS.1.16:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.16
+      title: Ensure IAM policies are attached only to groups or roles
+      description: By default, IAM users, groups, and roles have no access to AWS
+        resources. IAM policies are the means by which privileges are granted to users,
+        groups, or roles. It is recommended that IAM policies be applied directly
+        to groups and roles but not users.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.2
+      title: Ensure multi-factor authentication (MFA) is enabled for all IAM users
+        that have a console password
+      description: Multi-Factor Authentication (MFA) adds an extra layer of protection
+        on top of a user name and password. It is recommended that MFA be enabled
+        for all accounts that have a console password.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.20:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.20
+      title: Ensure a support role has been created to manage incidents with AWS Support
+      description: AWS provides a support center that can be used for incident notification
+        and response, as well as technical support and customer services. Create an
+        IAM Role to allow authorized users to manage incidents with AWS Support.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.22:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.22
+      title: Ensure IAM policies that allow full "*:*" administrative privileges are
+        not created
+      description: "IAM policies are the means by which privileges are granted to\
+        \ users, groups, or roles. It is recommended and considered a standard security\
+        \ advice to grant least privilege\u2014that is, granting only the permissions\
+        \ required to perform a task. Determine what users need to do and then craft\
+        \ policies for them that let the users perform only those tasks, instead of\
+        \ allowing full administrative privileges."
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.3
+      title: Ensure credentials unused for 90 days or greater are disabled
+      description: AWS IAM users can access AWS resources using different types of
+        credentials, such as passwords or access keys. It is recommended that all
+        credentials that have been unused in 90 or greater days be removed or deactivated.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.4:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.4
+      title: Ensure access keys are rotated every 90 days or less
+      description: Access keys consist of an access key ID and secret access key,
+        which are used to sign programmatic requests that you make to AWS. It is recommended
+        that all access keys be regularly rotated.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.5:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.5
+      title: Ensure IAM password policy requires at least one uppercase letter
+      description: Password policies are, in part, used to enforce password complexity
+        requirements. IAM password policies can be used to ensure passwords are comprised
+        of different character sets. It is recommended that the password policy require
+        at least one uppercase letter.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.6:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.6
+      title: Ensure IAM password policy requires at least one lowercase letter
+      description: Password policies are, in part, used to enforce password complexity
+        requirements. IAM password policies can be used to ensure passwords are comprised
+        of different character sets. It is recommended that the password policy require
+        at least one lowercase letter.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.7:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.7
+      title: Ensure IAM password policy requires at least one symbol
+      description: Password policies are, in part, used to enforce password complexity
+        requirements. IAM password policies can be used to ensure passwords are comprised
+        of different character sets. It is recommended that the password policy require
+        at least one symbol.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.8:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.8
+      title: Ensure IAM password policy requires at least one number
+      description: Password policies are, in part, used to enforce password complexity
+        requirements. IAM password policies can be used to ensure passwords are comprised
+        of different character sets. It is recommended that the password policy require
+        at least one number.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.1.9:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/1.9
+      title: Ensure IAM password policy requires minimum password length of 14 or
+        greater
+      description: Password policies are, in part, used to enforce password complexity
+        requirements. IAM password policies can be used to ensure passwords are at
+        least a given length. It is recommended that the password policy require a
+        minimum password length 14.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.2.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/2.1
+      title: Ensure CloudTrail is enabled in all regions
+      description: AWS CloudTrail is a web service that records AWS API calls for
+        your account and delivers log files to you. The recorded information includes
+        the identity of the API caller, the time of the API call, the source IP address
+        of the API caller, the request parameters, and the response elements returned
+        by the AWS service.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.2.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/2.2
+      title: Ensure CloudTrail log file validation is enabled
+      description: CloudTrail log file validation creates a digitally signed digest
+        file containing a hash of each log that CloudTrail writes to S3. These digest
+        files can be used to determine whether a log file was changed, deleted, or
+        unchanged after CloudTrail delivered the log. It is recommended that file
+        validation be enabled on all CloudTrails.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.2.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/2.3
+      title: Ensure the S3 bucket used to store CloudTrail logs is not publicly accessible
+      description: 'Details: 2.3 Ensure the S3 bucket used to store CloudTrail logs
+        is not publicly accessible'
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.2.4:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/2.4
+      title: Ensure CloudTrail trails are integrated with CloudWatch Logs
+      description: AWS CloudTrail is a web service that records AWS API calls made
+        in a given AWS account. CloudTrail uses Amazon S3 for log file storage and
+        delivery, so log files are stored durably. In addition to capturing CloudTrail
+        logs within a specified S3 bucket for long term analysis, realtime analysis
+        can be performed by configuring CloudTrail to send logs to CloudWatch Logs.
+        It is recommended that CloudTrail logs be sent to CloudWatch Logs.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.2.5:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/2.5
+      title: Ensure AWS Config is enabled
+      description: AWS Config is a web service that performs configuration management
+        of supported AWS resources within your account and delivers log files to you.
+        The recorded information includes the configuration item (AWS resource), relationships
+        between configuration items (AWS resources), and any configuration changes
+        between resources. It is recommended to enable AWS Config in all regions.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.2.6:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/2.6
+      title: Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket
+      description: S3 Bucket Access Logging generates a log that contains access records
+        for each request made to your S3 bucket. An access log record contains details
+        about the request, such as the request type, the resources specified in the
+        request worked, and the time and date the request was processed. It is recommended
+        that bucket access logging be enabled on the CloudTrail S3 bucket.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.2.7:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/2.7
+      title: Ensure CloudTrail logs are encrypted at rest using KMS CMKs
+      description: AWS Key Management Service (KMS) is a managed service that helps
+        create and control the encryption keys used to encrypt account data, and uses
+        Hardware Security Modules (HSMs) to protect the security of encryption keys.
+        CloudTrail logs can be configured to leverage server side encryption (SSE)
+        and KMS customer created master keys (CMK) to further protect CloudTrail logs.
+        It is recommended that CloudTrail be configured to use SSE-KMS.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.2.8:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/2.8
+      title: Ensure rotation for customer created CMKs is enabled
+      description: AWS Key Management Service (KMS) allows customers to rotate the
+        backing key which is key material stored within the KMS which is tied to the
+        key ID of the Customer Created customer master key (CMK). It is the backing
+        key that is used to perform cryptographic operations such as encryption and
+        decryption. It is recommended that CMK key rotation be enabled.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.2.9:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/2.9
+      title: Ensure VPC flow logging is enabled in all VPCs
+      description: VPC Flow Logs is a feature that enables you to capture information
+        about the IP traffic going to and from network interfaces in your VPC. After
+        you've created a flow log, you can view and retrieve its data in Amazon CloudWatch
+        Logs. It is recommended that VPC Flow Logs be enabled for packet "Rejects"
+        for VPCs.
+      severity: MEDIUM
+      status: DISABLED
+      disabled_reason: not considered that important
+    CIS.3.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.1
+      title: Ensure a log metric filter and alarm exist for unauthorized API calls
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. It is recommended that a metric filter and alarm be established
+        for unauthorized API calls.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.3.10:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.10
+      title: Ensure a log metric filter and alarm exist for security group changes
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. Security Groups are a stateful packet filter that controls ingress
+        and egress traffic within a VPC. It is recommended that a metric filter and
+        alarm be established changes to Security Groups.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.3.11:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.11
+      title: Ensure a log metric filter and alarm exist for changes to Network Access
+        Control Lists (NACL)
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. NACLs are used as a stateless packet filter to control ingress
+        and egress traffic for subnets within a VPC. It is recommended that a metric
+        filter and alarm be established for changes made to NACLs.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.3.12:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.12
+      title: Ensure a log metric filter and alarm exist for changes to network gateways
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. Network gateways are required to send/receive traffic to a destination
+        outside of a VPC. It is recommended that a metric filter and alarm be established
+        for changes to network gateways.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.3.13:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.13
+      title: Ensure a log metric filter and alarm exist for route table changes
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. Routing tables are used to route network traffic between subnets
+        and to network gateways. It is recommended that a metric filter and alarm
+        be established for changes to route tables.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.3.14:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.14
+      title: Ensure a log metric filter and alarm exist for VPC changes
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. It is possible to have more than 1 VPC within an account, in addition
+        it is also possible to create a peer connection between 2 VPCs enabling network
+        traffic to route between VPCs. It is recommended that a metric filter and
+        alarm be established for changes made to VPCs.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.3.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.2
+      title: Ensure a log metric filter and alarm exist for Management Console sign-in
+        without MFA
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. It is recommended that a metric filter and alarm be established
+        for console logins that are not protected by multi-factor authentication (MFA).
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.3.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.3
+      title: Ensure a log metric filter and alarm exist for usage of "root" account
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. It is recommended that a metric filter and alarm be established
+        for root login attempts.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.3.4:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.4
+      title: Ensure a log metric filter and alarm exist for IAM policy changes
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. It is recommended that a metric filter and alarm be established
+        changes made to Identity and Access Management (IAM) policies.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.3.5:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.5
+      title: Ensure a log metric filter and alarm exist for CloudTrail configuration
+        changes
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. It is recommended that a metric filter and alarm be established
+        for detecting changes to CloudTrail's configurations.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.3.6:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.6
+      title: Ensure a log metric filter and alarm exist for AWS Management Console
+        authentication failures
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. It is recommended that a metric filter and alarm be established
+        for failed console authentication attempts.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.3.7:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.7
+      title: Ensure a log metric filter and alarm exist for disabling or scheduled
+        deletion of customer created CMKs
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. It is recommended that a metric filter and alarm be established
+        for customer created CMKs which have changed state to disabled or scheduled
+        deletion.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.3.8:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.8
+      title: Ensure a log metric filter and alarm exist for S3 bucket policy changes
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. It is recommended that a metric filter and alarm be established
+        for changes to S3 bucket policies.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.3.9:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/3.9
+      title: Ensure a log metric filter and alarm exist for AWS Config configuration
+        changes
+      description: Real-time monitoring of API calls can be achieved by directing
+        CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters
+        and alarms. It is recommended that a metric filter and alarm be established
+        for detecting changes to CloudTrail's configurations.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.4.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/4.1
+      title: Ensure no security groups allow ingress from 0.0.0.0/0 to port 22
+      description: Security groups provide stateful filtering of ingress/egress network
+        traffic to AWS resources. It is recommended that no security group allows
+        unrestricted ingress access to port 22.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.4.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/4.2
+      title: Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389
+      description: Security groups provide stateful filtering of ingress/egress network
+        traffic to AWS resources. It is recommended that no security group allows
+        unrestricted ingress access to port 3389.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    CIS.4.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/cis-aws-foundations-benchmark/v/1.2.0/4.3
+      title: Ensure the default security group of every VPC restricts all traffic
+      description: A VPC comes with a default security group whose initial settings
+        deny all inbound traffic, allow all outbound traffic, and allow all traffic
+        between instances assigned to the security group. If you don't specify a security
+        group when you launch an instance, the instance is automatically assigned
+        to this default security group. It is recommended that the default security
+        group restrict all traffic.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+arn:aws:securityhub:{region}::standards/aws-foundational-security-best-practices/v/1.0.0:
+  subscription_arn: arn:aws:securityhub:{region}:{account}:subscription/aws-foundational-security-best-practices/v/1.0.0
+  status: READY
+  controls:
+    ACM.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/ACM.1
+      title: ACM certificates should be renewed after a specified time period
+      description: This AWS control checks whether ACM Certificates in your account
+        are marked for expiration within a specified time period. Certificates provided
+        by ACM are automatically renewed. ACM does not automatically renew certificates
+        that you import.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    APIGateway.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/APIGateway.1
+      title: API Gateway REST and WebSocket API execution logging should be enabled
+      description: This control checks whether all stages of Amazon API Gateway REST
+        and WebSocket APIs have logging enabled. The control fails if logging is not
+        enabled for all methods of a stage or if loggingLevel is neither ERROR nor
+        INFO.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    APIGateway.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/APIGateway.2
+      title: API Gateway REST API stages should be configured to use SSL certificates
+        for backend authentication
+      description: This control checks whether Amazon API Gateway REST API stages
+        have SSL certificates configured that backend systems can use to authenticate
+        that incoming requests are from the API Gateway.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    APIGateway.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/APIGateway.3
+      title: API Gateway REST API stages should have AWS X-Ray tracing enabled
+      description: This control checks whether AWS X-Ray active tracing is enabled
+        for your Amazon API Gateway REST API stages.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    AutoScaling.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/AutoScaling.1
+      title: Auto scaling groups associated with a load balancer should use load balancer
+        health checks
+      description: This control checks whether your Auto Scaling groups that are associated
+        with a load balancer are using Elastic Load Balancing health checks.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CloudTrail.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/CloudTrail.1
+      title: CloudTrail should be enabled and configured with at least one multi-region
+        trail
+      description: This AWS control checks that there is at least one multi-region
+        AWS CloudTrail trail.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    CloudTrail.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/CloudTrail.2
+      title: CloudTrail should have encryption at-rest enabled
+      description: This AWS control checks whether AWS CloudTrail is configured to
+        use the server side encryption (SSE) AWS Key Management Service (AWS KMS)
+        customer master key (CMK) encryption. The check will pass if the KmsKeyId
+        is defined.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    CloudTrail.4:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/CloudTrail.4
+      title: CloudTrail log file validation should be enabled
+      description: This AWS control checks whether CloudTrail log file validation
+        is enabled.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CloudTrail.5:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/CloudTrail.5
+      title: CloudTrail trails should be integrated with Amazon CloudWatch Logs
+      description: This AWS control checks whether AWS CloudTrail trails are configured
+        to send logs to Amazon CloudWatch Logs.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    CodeBuild.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/CodeBuild.1
+      title: CodeBuild GitHub or Bitbucket source repository URLs should use OAuth
+      description: This AWS control checks whether the GitHub or Bitbucket source
+        repository URL contains either personal access tokens or user name and password.
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    CodeBuild.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/CodeBuild.2
+      title: CodeBuild project environment variables should not contain clear text
+        credentials
+      description: This AWS control checks whether the project contains environment
+        variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    Config.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/Config.1
+      title: AWS Config should be enabled
+      description: This AWS control checks whether the Config service is enabled in
+        the account for the local region and is recording all resources.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    DMS.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/DMS.1
+      title: Database Migration Service replication instances should not be public
+      description: This AWS control checks whether AWS Database Migration Service
+        replication instances are public by examining the PubliclyAccessible field
+        value.
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    DynamoDB.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/DynamoDB.1
+      title: DynamoDB tables should automatically scale capacity with demand
+      description: This control checks whether a DynamoDB table can scale its read
+        or write capacity as needed. This control passes if the table uses an on-demand
+        capacity mode or if the table uses provisioned mode with automatic scaling
+        configured.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    DynamoDB.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/DynamoDB.2
+      title: DynamoDB tables should have point-in-time recovery enabled
+      description: This control checks whether point-in-time recovery (PITR) is enabled
+        for a DynamoDB table.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    DynamoDB.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/DynamoDB.3
+      title: DynamoDB Accelerator (DAX) clusters should be encrypted at rest
+      description: This control checks whether a DAX cluster is encrypted at rest.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    EC2.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EC2.1
+      title: EBS snapshots should not be public, determined by the ability to be restorable
+        by anyone
+      description: This AWS control checks whether Amazon Elastic Block Store snapshots
+        are not publicly restorable.
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    EC2.10:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EC2.10
+      title: Amazon EC2 should be configured to use VPC endpoints
+      description: This control checks whether a service endpoint for Amazon EC2 is
+        created for each VPC. The control fails if a VPC does not have a VPC endpoint
+        created for the Amazon EC2 service.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    EC2.15:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EC2.15
+      title: EC2 subnets should not automatically assign public IP addresses
+      description: This control checks if the assignment of public IPs in Amazon Virtual
+        Private Cloud (VPC) subnets have the MapPublicIpOnLaunch set to FALSE. The
+        control will pass if the flag is set to FALSE.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    EC2.16:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EC2.16
+      title: Unused Network Access Control Lists should be removed
+      description: This control checks to see if there are any NACLs (Network Access
+        Control List) that are unused. The control will check the item configuration
+        of the resource AWS::EC2::NetworkAcl and determine the relationships of the
+        NACL.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    EC2.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EC2.2
+      title: The VPC default security group should not allow inbound and outbound
+        traffic
+      description: This AWS control checks that the default security group of a VPC
+        does not allow inbound or outbound traffic.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    EC2.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EC2.3
+      title: Attached EBS volumes should be encrypted at-rest
+      description: This AWS control checks whether the EBS volumes that are in an
+        attached state are encrypted.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    EC2.4:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EC2.4
+      title: Stopped EC2 instances should be removed after a specified time period
+      description: This control checks whether any EC2 instances have been stopped
+        for more than the allowed number of days. An EC2 instance fails this check
+        if it is stopped for longer than the maximum allowed time period, which by
+        default is 30 days.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    EC2.6:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EC2.6
+      title: VPC flow logging should be enabled in all VPCs
+      description: This control checks whether Amazon Virtual Private Cloud flow logs
+        are found and enabled for Amazon VPCs. The traffic type is set to 'Reject'.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    EC2.7:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EC2.7
+      title: EBS default encryption should be enabled
+      description: This control checks whether Amazon Elastic Block Store (EBS) encryption
+        is enabled by default. The control fails if EBS default encryption is not
+        enabled.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    EC2.8:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EC2.8
+      title: EC2 instances should use Instance Metadata Service Version 2 (IMDSv2)
+      description: This control checks whether your Amazon Elastic Compute Cloud (Amazon
+        EC2) instance metadata version is configured with Instance Metadata Service
+        Version 2 (IMDSv2). The control passes if HttpTokens is set to required for
+        IMDSv2. The control fails if HttpTokens is set to optional.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    EC2.9:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EC2.9
+      title: EC2 instances should not have a public IPv4 address
+      description: This control checks whether EC2 instances have a public IP address.
+        The control fails if the publicIp field is present in the EC2 instance configuration
+        item. This control applies to IPv4 addresses only.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    EFS.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EFS.1
+      title: Elastic File System should be configured to encrypt file data at-rest
+        using AWS KMS
+      description: This AWS control checks whether Amazon Elastic File System (Amazon
+        EFS) is configured to encrypt the file data using AWS Key Management Service
+        (AWS KMS). The check will fail if the encrypted key is set to false on DescribeFileSystems
+        or if the KmsKeyId key on DescribeFileSystems does not match the KmsKeyId
+        parameter.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    EFS.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EFS.2
+      title: Amazon EFS volumes should be in backup plans
+      description: This control checks whether Amazon Elastic File System (Amazon
+        EFS) file systems are added to the backup plans in AWS Backup. The control
+        fails if EFS file systems are not included in the backup plans.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    ELB.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/ELB.3
+      title: Classic Load Balancer listeners should be configured with HTTPS or TLS
+        termination
+      description: This control checks whether your Classic Load Balancer listeners
+        are configured with HTTPS or TLS protocol for front-end (client to load balancer)
+        connections. The control is applicable if a Classic Load Balancer has listeners.
+        If your Classic Load Balancer does not have a listener configured, then the
+        control does not report any findings.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    ELB.4:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/ELB.4
+      title: Application load balancer should be configured to drop http headers
+      description: This control evaluates AWS Application Load Balancers (ALB) to
+        ensure they are configured to drop http headers. By default, ALBs are not
+        configured to drop invalid http header values. This control evaluates all
+        ALBs fails if the attribute value of routing.http.drop_invalid_header_fields.enabled
+        is set to false.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    ELB.5:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/ELB.5
+      title: Application and Classic Load Balancers logging should be enabled
+      description: This control checks whether the Application Load Balancer and the
+        Classic Load Balancer have logging enabled. The control fails if the access_logs.s3.enabled
+        is false.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    ELB.6:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/ELB.6
+      title: Application Load Balancer deletion protection should be enabled
+      description: This control checks whether an Application Load Balancer has deletion
+        protection enabled. The control fails if deletion protection is not configured.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    ELBv2.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/ELBv2.1
+      title: Application Load Balancer should be configured to redirect all HTTP requests
+        to HTTPS
+      description: This AWS control checks whether HTTP to HTTPS redirection is configured
+        on all HTTP listeners of Application Load Balancers. The control will fail
+        if one or more HTTP listeners of Application Load Balancers do not have HTTP
+        to HTTPS redirection configured.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    EMR.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/EMR.1
+      title: Amazon Elastic MapReduce cluster master nodes should not have public
+        IP addresses
+      description: This control checks whether master nodes on EMR clusters have public
+        IP addresses.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    ES.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/ES.1
+      title: Elasticsearch domains should have encryption at-rest enabled
+      description: This AWS control checks whether Amazon Elasticsearch Service (Amazon
+        ES) domains have encryption at rest configuration enabled. This check will
+        fail if the EncryptionAtRestOptions field is not enabled.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    ES.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/ES.2
+      title: Amazon Elasticsearch Service domains should be in a VPC
+      description: This control checks whether Amazon Elasticsearch Service domains
+        are in a VPC.  It does not evaluate the VPC subnet routing configuration to
+        determine public reachability. This AWS control also does not check whether
+        the Amazon ES resource-based policy permits public access by other accounts
+        or external entities. You should ensure that Amazon ES domains are not attached
+        to public subnets. See Resource-based policies (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-ac.html#es-ac-types-resource)
+        in the Amazon Elasticsearch Service Developer Guide. You should also ensure
+        that your VPC is configured according to the recommended best practices. See
+        Security best practices for your VPC (https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html)
+        in the Amazon VPC User Guide.
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    ES.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/ES.3
+      title: Amazon Elasticsearch domains should encrypt data sent between nodes
+      description: This control checks whether Amazon ES domains have node-to-node
+        encryption enabled.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    ElasticBeanstalk.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/ElasticBeanstalk.1
+      title: Elastic Beanstalk environments should have enhanced health reporting
+        enabled
+      description: This control checks whether enhanced health reporting is enabled
+        for your AWS Elastic Beanstalk environments.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    ElasticBeanstalk.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/ElasticBeanstalk.2
+      title: Elastic Beanstalk managed platform updates should be enabled
+      description: This control checks whether managed platform updates are enabled
+        for the AWS Elastic Beanstalk environment.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    GuardDuty.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/GuardDuty.1
+      title: GuardDuty should be enabled
+      description: This AWS control checks whether Amazon GuardDuty is enabled in
+        your AWS account and region.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    IAM.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/IAM.1
+      title: IAM policies should not allow full "*" administrative privileges
+      description: 'This AWS control checks whether the default version of AWS Identity
+        and Access Management (IAM) policies (also known as customer managed policies)
+        do not have administrator access with a statement that has "Effect": "Allow"
+        with "Action": "*" over "Resource": "*". It only checks for the Customer Managed
+        Policies that you created, but not inline and AWS Managed Policies.'
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    IAM.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/IAM.2
+      title: IAM users should not have IAM policies attached
+      description: This AWS control checks that none of your IAM users have policies
+        attached. Instead, IAM users must inherit permissions from IAM groups or roles.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    IAM.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/IAM.3
+      title: IAM users' access keys should be rotated every 90 days or less
+      description: This AWS control checks whether the active access keys are rotated
+        within 90 days.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    IAM.4:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/IAM.4
+      title: IAM root user access key should not exist
+      description: This AWS control checks whether the root user access key is available.
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    IAM.5:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/IAM.5
+      title: MFA should be enabled for all IAM users that have a console password
+      description: This AWS control checks whether AWS Multi-Factor Authentication
+        (MFA) is enabled for all AWS Identity and Access Management (IAM) users that
+        use a console password.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    IAM.6:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/IAM.6
+      title: Hardware MFA should be enabled for the root user
+      description: This AWS control checks whether your AWS account is enabled to
+        use hardware multi-factor authentication (MFA) device to sign in with root
+        credentials.
+      severity: CRITICAL
+      status: DISABLED
+      disabled_reason: As the usage of root account is already prohibited by means
+        of service control policies, the use of virtual MFA is considered sufficient
+        for this.
+    IAM.7:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/IAM.7
+      title: Password policies for IAM users should have strong configurations
+      description: 'This AWS control checks whether the account password policy for
+        IAM users uses the following recommended configurations: RequireUppercaseCharacters:
+        true, RequireLowercaseCharacters: true, RequireSymbols: true, RequireNumbers:
+        true, MinimumPasswordLength: 8.'
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    IAM.8:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/IAM.8
+      title: Unused IAM user credentials should be removed
+      description: This control checks whether your IAM users have passwords or active
+        access keys that were not used within the previous 90 days.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    KMS.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/KMS.1
+      title: IAM customer managed policies should not allow decryption actions on
+        all KMS keys
+      description: Checks whether the default version of IAM customer managed policies
+        allow principals to use the AWS Key Management Service (KMS) decryption actions
+        on all resources. This control fails if kms:Decrypt or kms:ReEncryptFrom actions
+        are allowed on all KMS keys. The control evaluates both attached and unattached
+        customer managed policies. It does not check inline policies or AWS managed
+        policies.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    KMS.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/KMS.2
+      title: IAM principals should not have IAM inline policies that allow decryption
+        actions on all KMS keys
+      description: Checks whether the inline policies embedded in your IAM principals
+        (Role/User/Group) allow the AWS Key Management Service (KMS) decryption actions
+        on all KMS keys. This control fails if kms:Decrypt or kms:ReEncryptFrom actions
+        are allowed on all KMS keys in an inline policy.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    KMS.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/KMS.3
+      title: AWS KMS keys should not be deleted unintentionally
+      description: This control checks whether AWS Key Management Service (KMS) customer
+        managed keys (CMK) are scheduled for deletion. The control fails if a KMS
+        CMK is scheduled for deletion.
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    Lambda.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/Lambda.1
+      title: Lambda function policies should prohibit public access
+      description: This control checks whether the AWS Lambda function policy attached
+        to the Lambda resource prohibits public access. If the Lambda function policy
+        allows public access, the control fails.
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    Lambda.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/Lambda.2
+      title: Lambda functions should use supported runtimes
+      description: 'This AWS control checks that the lambda function settings for
+        runtimes, match the expected values set for the supported runtimes for each
+        language. The supported runtimes this control checks for are: nodejs14.x,
+        nodejs12.x, nodejs10.x, python3.8, python3.7, python3.6, ruby2.5, java11,
+        java8, go1.x, dotnetcore2.1, dotnetcore3.1, ruby2.7.'
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    Lambda.4:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/Lambda.4
+      title: Lambda functions should have a dead-letter queue configured
+      description: This control checks whether an AWS Lambda function is configured
+        with a dead-letter queue. The control fails if the Lambda function is not
+        configured with a dead-letter queue.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    RDS.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/RDS.1
+      title: RDS snapshot should be private
+      description: This AWS control checks if Amazon Relational Database Service (Amazon
+        RDS) snapshots are public.
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    RDS.10:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/RDS.10
+      title: IAM authentication should be configured for RDS instances
+      description: This control checks whether an RDS DB instance has IAM database
+        authentication enabled.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    RDS.12:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/RDS.12
+      title: IAM authentication should be configured for RDS clusters
+      description: This control checks if an RDS DB cluster has IAM database authentication
+        enabled.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    RDS.13:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/RDS.13
+      title: RDS automatic minor version upgrades should be enabled
+      description: This control checks if automatic minor version upgrades are enabled
+        for the Amazon RDS database instance.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    RDS.14:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/RDS.14
+      title: Amazon Aurora clusters should have backtracking enabled
+      description: This control checks if Amazon Aurora clusters have backtracking
+        enabled.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    RDS.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/RDS.2
+      title: RDS DB Instances should prohibit public access, determined by the PubliclyAccessible
+        configuration
+      description: This AWS control checks whether RDS instances are publicly accessible
+        by evaluating the publiclyAccessible field in the instance configuration item.
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    RDS.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/RDS.3
+      title: RDS DB instances should have encryption at-rest enabled
+      description: This AWS control checks whether storage encryption is enabled for
+        your RDS DB instances.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    RDS.4:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/RDS.4
+      title: RDS cluster snapshots and database snapshots should be encrypted at rest
+      description: This control checks whether Amazon RDS cluster snapshots and database
+        snapshots are encrypted.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    RDS.5:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/RDS.5
+      title: RDS DB instances should be configured with multiple Availability Zones
+      description: This control checks whether high availability is enabled for your
+        RDS DB instances.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    RDS.6:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/RDS.6
+      title: Enhanced monitoring should be configured for RDS DB instances
+      description: This control checks whether enhanced monitoring is enabled for
+        your RDS DB instances.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    RDS.7:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/RDS.7
+      title: RDS clusters should have deletion protection enabled
+      description: This control checks whether RDS clusters have deletion protection
+        enabled.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    RDS.8:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/RDS.8
+      title: RDS DB instances should have deletion protection enabled
+      description: This control checks whether RDS DB instances have deletion protection
+        enabled.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    RDS.9:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/RDS.9
+      title: Database logging should be enabled
+      description: 'This control checks whether the following Amazon RDS logs are
+        enabled and sent to CloudWatch Logs: Oracle: (Alert, Audit, Trace, Listener),
+        PostgreSQL: (Postgresql, Upgrade), MySQL: (Audit, Error, General, SlowQuery),
+        MariaDB: (Audit, Error, General, SlowQuery), SQL Server: (Error, Agent), Aurora:
+        (Audit, Error, General, SlowQuery), Aurora-MySQL: (Audit, Error, General,
+        SlowQuery), Aurora-PostgreSQL: (Postgresql).'
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    Redshift.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/Redshift.1
+      title: Amazon Redshift clusters should prohibit public access
+      description: This control checks whether Amazon Redshift clusters are publicly
+        accessible. It evaluates the publiclyAccessible field in the cluster configuration
+        item.
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    Redshift.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/Redshift.2
+      title: Connections to Amazon Redshift clusters should be encrypted in transit
+      description: This control checks whether connections to Amazon Redshift clusters
+        are required to use encryption in transit. The check fails if the Amazon Redshift
+        cluster parameter require_SSL is not set to 1.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    Redshift.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/Redshift.3
+      title: Amazon Redshift clusters should have automatic snapshots enabled
+      description: This control checks whether Amazon Redshift clusters have automated
+        snapshots enabled. It also checks whether the snapshot retention period is
+        greater than or equal to 7.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    Redshift.6:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/Redshift.6
+      title: Amazon Redshift should have automatic upgrades to major versions enabled
+      description: This control checks whether an Amazon Redshift cluster is configured
+        with automatic upgrades to major versions.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    Redshift.7:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/Redshift.7
+      title: Redshift clusters should use enhanced VPC routing
+      description: This control checks whether a Redshift cluster has EnhancedVpcRouting
+        enabled.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    S3.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/S3.1
+      title: S3 Block Public Access setting should be enabled
+      description: 'This AWS control checks whether the following public access block
+        settings are configured from account level: ignorePublicAcls: True, blockPublicPolicy:
+        True, blockPublicAcls: True, restrictPublicBuckets: True.'
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    S3.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/S3.2
+      title: S3 buckets should prohibit public read access
+      description: This AWS control checks whether your S3 buckets allow public read
+        access by evaluating the Block Public Access settings, the bucket policy,
+        and the bucket access control list (ACL).
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    S3.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/S3.3
+      title: S3 buckets should prohibit public write access
+      description: This AWS control checks whether your S3 buckets allow public write
+        access by evaluating the Block Public Access settings, the bucket policy,
+        and the bucket access control list (ACL).
+      severity: CRITICAL
+      status: ENABLED
+      disabled_reason: n/a
+    S3.4:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/S3.4
+      title: S3 buckets should have server-side encryption enabled
+      description: This AWS control checks that your Amazon S3 bucket either has Amazon
+        S3 default encryption enabled or that the S3 bucket policy explicitly denies
+        put-object requests without server side encryption.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    S3.5:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/S3.5
+      title: S3 buckets should require requests to use Secure Socket Layer
+      description: This AWS control checks whether S3 buckets have policies that require
+        requests to use Secure Socket Layer (SSL).
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    S3.6:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/S3.6
+      title: S3 permissions granted to other AWS accounts in bucket policies should
+        be restricted
+      description: 'This control checks whether the S3 bucket policy allows sensitive
+        bucket-level or object-level actions from a principal in another AWS account.
+        The control fails if any of the following actions are allowed in the S3 bucket
+        policy for a principal in another AWS account: s3:DeleteBucketPolicy, s3:PutBucketAcl,
+        s3:PutBucketPolicy, s3:PutObjectAcl, and s3:PutEncryptionConfiguration.'
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    SNS.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/SNS.1
+      title: SNS topics should be encrypted at-rest using AWS KMS
+      description: This control checks whether an Amazon SNS topic is encrypted at
+        rest using AWS KMS.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    SSM.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/SSM.1
+      title: EC2 instances should be managed by AWS Systems Manager
+      description: This AWS control checks whether the Amazon EC2 instances in your
+        account are managed by AWS Systems Manager.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    SSM.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/SSM.2
+      title: EC2 instances managed by Systems Manager should have a patch compliance
+        status of COMPLIANT after a patch installation
+      description: This AWS control checks whether the compliance status of the Amazon
+        EC2 Systems Manager patch compliance is COMPLIANT or NON_COMPLIANT after the
+        patch installation on the instance. It only checks instances that are managed
+        by AWS Systems Manager Patch Manager.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    SSM.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/SSM.3
+      title: EC2 instances managed by Systems Manager should have an association compliance
+        status of COMPLIANT
+      description: This AWS control checks whether the status of the AWS Systems Manager
+        association compliance is COMPLIANT or NON_COMPLIANT after the association
+        is executed on an instance.
+      severity: LOW
+      status: ENABLED
+      disabled_reason: n/a
+    SageMaker.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/SageMaker.1
+      title: Amazon SageMaker notebook instances should not have direct internet access
+      description: This AWS control checks whether direct internet access is disabled
+        for an Amazon SageMaker notebook instance by examining the DirectInternetAccess
+        field is disabled for an Amazon SageMaker notebook instance.
+      severity: HIGH
+      status: ENABLED
+      disabled_reason: n/a
+    SecretsManager.1:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/SecretsManager.1
+      title: Secrets Manager secrets should have automatic rotation enabled
+      description: This control checks whether a secret stored in AWS Secrets Manager
+        is configured to rotate automatically.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    SecretsManager.2:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/SecretsManager.2
+      title: Secrets Manager secrets configured with automatic rotation should rotate
+        successfully
+      description: This control checks whether an AWS Secrets Manager secret rotated
+        successfully based on the rotation schedule. The control fails if RotationOccurringAsScheduled
+        is false. The control does not evaluate secrets that do not have rotation
+        configured.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    SecretsManager.3:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/SecretsManager.3
+      title: Remove unused Secrets Manager secrets
+      description: This control checks whether your secrets have been accessed within
+        a specified number of days. The default value is 90 days. Secrets that have
+        not been accessed even once within the number days you define, fail this check.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+    SecretsManager.4:
+      arn: arn:aws:securityhub:{region}:{account}:control/aws-foundational-security-best-practices/v/1.0.0/SecretsManager.4
+      title: Secrets Manager secrets should be rotated within a specified number of
+        days
+      description: This control checks if your secrets have rotated at least once
+        within 90 days.
+      severity: MEDIUM
+      status: ENABLED
+      disabled_reason: n/a
+
